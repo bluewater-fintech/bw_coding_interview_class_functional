@@ -1,8 +1,9 @@
 import React from 'react';
+import Container from './components/container'
 
 function App() {
   return (
-    <h1>Hello world!</h1>
+    <Container name='BlueWater Financial Technologies' />
   );
 }
 
