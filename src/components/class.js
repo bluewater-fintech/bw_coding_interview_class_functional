@@ -26,6 +26,11 @@ class ClassComponent extends React.Component {
             text: 'This is test text.',
             ...this.state,
         })
+        window.alert('The component was mounted.')
+    }
+
+    componentDidUpdate = () => {
+        window.alert('The component was updated.')
     }
 
     componentWillUnmount = () => {
@@ -37,7 +42,8 @@ class ClassComponent extends React.Component {
             <>
                 <input name='username' value={this.state.username} onChange={(e) => this.handleChange(e)} />
                 <input name='text' value={this.state.text} onChange={(e) => this.handleChange(e)} />
-                <p>{this.state.username} | | | | {this.state.text}</p> 
+                <p>{this.state.username} | | | | {this.state.text}</p>
+                <p>{this.state.msg}</p> 
             </>
         )
     }
